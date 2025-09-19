@@ -1,5 +1,4 @@
 import { Component, HostListener } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -8,18 +7,10 @@ import { NgOptimizedImage } from '@angular/common';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-  constructor(){
-  }
+  isScrolled = false;
 
-  ngOnInit(): void {
-    window.addEventListener('scroll', this.scroll, true)
-  }
-
-  scroll = (): void => {
-    if(window.scrollY >= 10){
-      document.body.style.setProperty('--navbar-color', "black");
-    } else{
-      document.body.style.setProperty('--navbar-color', "transparent");
-    }
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.isScrolled = window.scrollY > 50; // threshold in px
   }
 }

@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header" [class.scrolled]="isScrolled">
     <div>
         <img class="logo" src="/Purdue Formula SAE Logo.png" alt="" priority>
     </div>
@@ -17,8 +17,7 @@
 
 <style>
     .header {
-        --navbar-color: transparent;
-        background-color: var(--navbar-color);
+        background-color: transparent;
         transition: all .5s ease-in-out;
         display: flex;
         flex-direction: row;
@@ -27,6 +26,9 @@
         position: fixed;
         top: 0;
         width: 100%;
+    }
+    .header.scrolled {
+        background-color: black;
     }
     .logo {
         max-width: 350px;
