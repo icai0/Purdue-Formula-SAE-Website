@@ -7,10 +7,11 @@ import { Component, HostListener } from '@angular/core';
   styleUrl: './navbar.css'
 })
 export class Navbar {
-  isScrolled = false;
+  // transparent to black transition
+  pastThreshold = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isScrolled = window.scrollY > 50; // threshold in px
+    this.pastThreshold = window.scrollY > 50;
   }
 }
