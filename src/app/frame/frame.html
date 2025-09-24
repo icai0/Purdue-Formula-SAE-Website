@@ -2,10 +2,19 @@
 <div class="image-container">
     <img src={{image()}}>
 </div>
+<div class="content">
+    <ng-content/>
+</div>
+<app-footer/>
 
 <style>
     .image-container {
         width: 100%;
+    }
+    .content {
+        width: 100%;
+        min-height: 100%;
+        background-color: black;
     }
     img{
         width: 100%;
