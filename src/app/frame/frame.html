@@ -2,8 +2,10 @@
 <div class="image-container">
     <img src={{image()}}>
 </div>
-<div class="content">
-    <ng-content/>
+<div class="background">
+    <div class="content">
+        <ng-content/>
+    </div>
 </div>
 <app-footer/>
 
@@ -11,10 +13,16 @@
     .image-container {
         width: 100%;
     }
-    .content {
+    .background {
         width: 100%;
         min-height: 100vh;
         background-color: black;
+    }
+    .content {
+        padding: 50px;
+        width: fit-content;
+        height: fit-content;
+        align-content: center;
     }
     img{
         width: 100%;
