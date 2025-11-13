@@ -32,24 +32,52 @@
 
   <div class="statbox-frame">
     <div class="statbox">
-        <div class="counter">50</div>
-        <div class="counter-text">Active Members</div>
+      <div class="counter">50</div>
+      <div class="counter-text">Active Members</div>
     </div>
     <div class="statbox">
-        <div class="counter">6</div>
-        <div class="counter-text">Subteams</div>
+      <div class="counter">6</div>
+      <div class="counter-text">Subteams</div>
     </div>
     <div class="statbox">
-        <div class="counter">33</div>
-        <div class="counter-text">Years of Engineering Excellence</div>
+      <div class="counter">33</div>
+      <div class="counter-text">Years of Engineering Excellence</div>
     </div>
     <div class="statbox">
-        <div class="counter">6th</div>
-        <div class="counter-text">Overall in 2025</div>
+      <div class="counter">6th</div>
+      <div class="counter-text">Overall in 2025</div>
     </div>
   </div>
-  <iframe width="1020" height="630" src="https://www.youtube.com/embed/eFtLyyMO6Ug?si=W8_936E1O5CavJKB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-  <app-infobox image="/infobox1.jpg" title="Network" description="Direct access to many motorsport, aerospace, and automotive companies through networking events"></app-infobox>
+  <iframe
+    width="1020"
+    height="630"
+    src="https://www.youtube.com/embed/eFtLyyMO6Ug?si=W8_936E1O5CavJKB"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+  ></iframe>
+  <div class="info-section">
+    <app-infobox
+      image="/infobox1.jpg"
+      icon="/network-icon.svg"
+      title="Network"
+      description="Direct access to many motorsport, aerospace, and automotive companies through networking events"
+    ></app-infobox>
+    <app-infobox
+      image="/infobox1.jpg"
+      icon="/network-icon.svg"
+      title="History"
+      description="We have been racing for over 30 years! This includes a 8th place overall finish at FSAE Michigan in May 2024."
+    ></app-infobox>
+    <app-infobox
+      image="/infobox1.jpg"
+      icon="/network-icon.svg"
+      title="Compete"
+      description="Compete with schools from all around the world including the United States, Germany, Brazil, Poland, Austria and many more."
+    ></app-infobox>
+  </div>
 </app-frame>
 
 <style>
@@ -57,10 +85,10 @@
     color: white;
   }
   .counter-text {
-    color: #CEB888;
+    color: #ceb888;
   }
   .counter {
-    color: #CEB888;
+    color: #ceb888;
     font-size: 75px;
     font-weight: 600;
     margin-top: 40px;
@@ -82,5 +110,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .info-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
   }
 </style>

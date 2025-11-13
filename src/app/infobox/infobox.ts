@@ -9,6 +9,7 @@ import { Component, input } from '@angular/core';
 
 export class Infobox {
   image = input.required<string>();
+  icon = input.required<string>();
   title = input.required<string>();
   description = input.required<string>();
 }
